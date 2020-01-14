@@ -11,7 +11,7 @@ namespace sortering
 
 			Random rnd = new Random();
 
-			int antal = 1000;
+			int antal = 100000;
 
 			for (int i = 0; i < antal; i++)
 			{
