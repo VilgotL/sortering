@@ -12,7 +12,7 @@ namespace sortering
 
 			Random rnd = new Random();
 
-			int antal = 5000;
+			int antal = 10000;
 
 			for (int i = 0; i < antal; i++)
 			{
@@ -40,7 +40,7 @@ namespace sortering
 				Console.WriteLine(element);
 			}
 			Console.WriteLine();
-			Console.WriteLine(watch.ElapsedMilliseconds);
+			Console.WriteLine("Tid: " + watch.ElapsedMilliseconds);
 		}
 	}
 }
