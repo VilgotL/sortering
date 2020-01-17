@@ -19,8 +19,6 @@ namespace sortering
 				lista.Add(rnd.Next(0, antal + 1));
 			}
 
-			int temp;
-
 			var watch = Stopwatch.StartNew();
 
 			for (int i = 1; i < lista.Count; i++)
