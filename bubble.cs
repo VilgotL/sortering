@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace sortering
 {
@@ -11,7 +12,7 @@ namespace sortering
 
 			Random rnd = new Random();
 
-			int antal = 100000;
+			int antal = 1000;
 
 			for (int i = 0; i < antal; i++)
 			{
@@ -20,11 +21,13 @@ namespace sortering
 
 			int temp;
 
+			var watch = Stopwatch.StartNew();
+
 			for (int i = 0; i < lista.Count - 1; i++)
 			{
 				for (int j = 0; j < lista.Count - 1 - i; j++)
 				{
-					if (lista[j] > lista[j+1])
+					if (lista[j] > lista[j + 1])
 					{
 						temp = lista[j + 1];
 						lista[j + 1] = lista[j];
@@ -32,11 +35,14 @@ namespace sortering
 					}
 				}
 			}
-			
-			foreach(int element in lista)
+			watch.Stop();
+
+			foreach (int element in lista)
 			{
 				Console.WriteLine(element);
 			}
+			Console.WriteLine();
+			Console.WriteLine(watch.ElapsedMilliseconds);
 		}
 	}
 }
